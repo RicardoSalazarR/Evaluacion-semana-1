@@ -1,0 +1,70 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container>div {
+    width: 500px;
+    height: 175px;
+
+    align-items: end;
+    background-color: white;
+    padding: 8px;
+    position: relative;
+}
+
+.quote-box {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "first second"
+        ". third";
+}
+
+.first {
+    grid-area: first;
+
+}
+
+.second {
+    margin-top: 5px;
+    grid-area: second;
+}
+
+.third {
+    grid-area: third;
+    margin-left: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.change-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: white;
+    right: 0;
+    display: flex;
+
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+}
+.change-quote{
+    padding: 16px 0;
+}
