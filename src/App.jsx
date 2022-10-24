@@ -8,7 +8,7 @@ import 'boxicons'
 function App() {
   const randomIndex = Math.floor(Math.random() * quotes.length)
   const [num, setNum] = useState(randomIndex)
-  const colors = ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 'lime', 'maroon', 'navy', 'olive', 'purple', 'red', 'silver', 'teal', 'white', 'yellow']
+  const colors = ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 'lime', 'maroon', 'navy', 'olive', 'purple', 'red', 'silver', 'teal', 'yellow']
 
   const [color, setColor] = useState("red")
   const changeIndex = () => {
