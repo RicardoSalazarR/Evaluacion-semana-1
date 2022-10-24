@@ -8,18 +8,24 @@ import 'boxicons'
 function App() {
   const randomIndex = Math.floor(Math.random() * quotes.length)
   const [num, setNum] = useState(randomIndex)
-  const colors=["blue","black","red","pink"]
-  const [color,setColor]=useState("red")
+  const colors = ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 'lime', 'maroon', 'navy', 'olive', 'purple', 'red', 'silver', 'teal', 'white', 'yellow']
+
+  const [color, setColor] = useState("red")
   const changeIndex = () => {
     setNum(Math.floor(Math.random() * quotes.length))
-    setColor(colors[Math.floor(Math.random() * colors.length)])
+    const newColor = colors[Math.floor(Math.random() * colors.length)]
+    if (color === newColor) {
+      changeIndex
+    } else {
+      setColor(newColor)
+    }
   }
 
   return (
-    <div className='container' style={{backgroundColor:color}}>
+    <div className='container' style={{ backgroundColor: color }}>
       <div>
         <QuoteBox index={num} color={color} />
-        <Change change={changeIndex} color={color}/>
+        <Change change={changeIndex} color={color} />
       </div>
     </div>
   )
